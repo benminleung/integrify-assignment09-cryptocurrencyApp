@@ -8,10 +8,11 @@ function getData(){
     }).then(function(myJson) {
         // console.log(myJson);
         mainData = myJson;
-    });
+        insertData(myJson, 20);     
+    }).catch(()=>console.log('error with fetch'));
     
-    setTimeout(function(){
-        // console.log(mainData[0].id);
-        insertData(mainData, 20);
-    }, 450);
+    // setTimeout(function(){
+    //     // console.log(mainData[0].id);
+    //     insertData(mainData, 20);
+    // }, 450);
 };
