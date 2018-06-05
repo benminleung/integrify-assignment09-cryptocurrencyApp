@@ -72,7 +72,7 @@ function sortBar() {
             // console.dir(click);
             
             if (e.target.classList.contains('sortBtn')) {
-                console.log(e.target);
+                // console.log(e.target);
                 // changes active class
                 sortBar.getElementsByClassName('active')[0].classList.remove('active');
                 e.target.classList.add('active');
@@ -81,13 +81,10 @@ function sortBar() {
                 const key = e.target.id.slice(6);
                 // console.log(key);
                 sortProcess(key);
-                mainData.forEach((item) => console.log(item.name));
+                // mainData.forEach((item) => console.log(item.name));
                 runSearch(document.getElementById('searchBar').value.toLowerCase());
             }
-                
             //runs funciton to sort mainData
-            
-
         });
 }
 
@@ -96,7 +93,7 @@ function sortBar() {
 // ran by dataProcess.js and other functions.
 // Often used with number set to 20.
 function insertData (data, number){
-console.log('data', data)
+// console.log('data', data)
     // If number is undefined, number will equal length of list-1, meaning printing all items on list.
     // const insertAmount = number-1 || data.length-1;
     const insertAmount =  data.length-1;
@@ -183,7 +180,7 @@ console.log('data', data)
                 elItem.appendChild(elChange.cloneNode(true));
                 elItem.appendChild(elChangeValue);
 
-                console.log(name); 
+                // console.log(name);
 
             elMainContent.appendChild(elItem);
 
@@ -193,9 +190,9 @@ console.log('data', data)
      
     try {
         document.getElementById('mainContent').remove();
-        console.log(`MainC exists`);
+        // console.log(`MainC exists`);
     } catch {
-        console.log(`MainC Doesnt Exist`);
+        // console.log(`MainC Doesnt Exist`);
     }
 
     // if (i < data.length - 1) {

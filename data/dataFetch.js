@@ -8,7 +8,7 @@ function getData(){
     }).then(function(myJson) {
         // console.log(myJson);
         mainData = myJson;
-        insertData(myJson, 20);     
+        insertData(myJson, 20);
     }).catch(()=>console.log('error with fetch'));
     
     // setTimeout(function(){
