@@ -1,15 +1,20 @@
+//creates data to be printed. Activated via multiple channels, including search 'input' and sort 'click' listeners.
+function creatData (){
+
+}
+
 function sortProcess(key, data=mainData){
     switch (key) {
         case 'rank':
         case 'price_usd':
         case 'percent_change_24h':
             data.sort((a,b) => {
-                console.log(a[key] + " ---vs--- " + b[key]);
+                // console.log(a[key] + " ---vs--- " + b[key]);
                 return a[key] - b[key];
             });
             break;
         case 'name':
-            console.log(data.slice(0), ' dataSlice');
+            // console.log(data.slice(0), ' dataSlice');
             const sortedData = data.slice(0).sort((a,b) => {
                 const first = a[key].toLowerCase();
                 const second = b[key].toLowerCase();
@@ -22,7 +27,7 @@ function sortProcess(key, data=mainData){
                     return 0;
                 }
             });
-            console.log(sortedData, " sortedData");
+            // console.log(sortedData, " sortedData");
             mainData = sortedData;
             insertData(sortedData);
             break;
