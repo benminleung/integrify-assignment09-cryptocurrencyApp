@@ -1,8 +1,9 @@
 let mainData;
 
-function getData(){    
-    fetch("/data/data.json")
-    // fetch("/data/data.json")
+function getData(){
+    // short test version of data
+    // fetch("/data/dataShort.json")
+    fetch("https://api.coinmarketcap.com/v1/ticker/?limit=2000")
     .then(function(response) {
         return response.json();
     }).then(function(myJson) {
